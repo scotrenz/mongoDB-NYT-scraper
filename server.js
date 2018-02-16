@@ -5,7 +5,7 @@ var exphbs = require("express-handlebars");
 var Handlebars = require("handlebars");
 const mongoose = require("mongoose");
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "https://cryptic-meadow-65056.herokuapp.com";
 
 mongoose.connect("MONGODB_URI", {
     useMongoClient: true
