@@ -5,17 +5,12 @@ var exphbs = require("express-handlebars");
 var Handlebars = require("handlebars");
 const mongoose = require("mongoose");
 
-var MONGODB_URI = process.env.MONGODB_URI || "https://cryptic-meadow-65056.herokuapp.com";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_9k4rlbpp:rj5vm7q4rqslkg9crpsrfedk2r@ds239128.mlab.com:39128/heroku_9k4rlbpp";
 
-mongoose.connect("MONGODB_URI", {
+mongoose.connect(MONGODB_URI, {
     useMongoClient: true
 });
 
-//For testing
-// mongoose.Promise = Promise;
-// mongoose.connect("mongodb://localhost/newyorktimes", {
-//   useMongoClient: true
-// });
 
 var db = mongoose.connection;
 
