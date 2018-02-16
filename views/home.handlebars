@@ -1,0 +1,49 @@
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4 id="ArticleLen"></h4>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">
+            <i class="large material-icons">check</i>
+        </a>
+    </div>
+</div>
+<div id="navBar" class="row">
+    <div class="col m3">
+        <h4>Mongo Scraper</h4>
+    </div>
+    <div class="col m2">
+        <a href="/">
+            <p class="highlight">Home</p>
+        </a>
+    </div>
+    <div class="col m2">
+        <a href="/saved">
+            <p>Saved Articles</p>
+        </a>
+    </div>
+    <div class="col m4">
+        <a id="scrape" class="waves-effect waves-light btn-large red">SCRAPE NEW ARTICLES!</a>
+    </div>
+</div>
+<div id="mainPage">
+    <div>Mongo Scraper</div>
+    <div style="font-size: 20px;">NEW YORK TIMES EDITION</div>
+</div>
+<div id="content" class="container">
+    {{#if articles}} {{#each articles}}
+    <div id="headlines" class="row">
+        <div class="col m8">
+            <p>{{this.headline}}</p>
+        </div>
+        <div class="col m4">
+            <a id="save" data-id="{{this._id}}" class="waves-effect waves-light btn green ">SAVE ARTICLE</a>
+        </div>
+    </div>
+    <div id="summary ">
+        <p>{{this.summary}}</p>
+    </div>
+    {{/each}} {{else}}
+    <h4>Uh Oh. Looks like we don't have any new articles.</h4>
+    {{/if}}
+</div>
