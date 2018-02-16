@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-mongoose.connect("mongodb://heroku_bc0tfcjp:cr58svd7egj7qgk7310e0hk87l@ds249737.mlab.com:49737/heroku_bc0tfcjp", {
+mongoose.connect("MONGODB_URI", {
     useMongoClient: true
 });
 
